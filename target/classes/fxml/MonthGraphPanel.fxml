@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BudgetManager.controllers.MonthGraphPanelController">
+   <children>
+      <VBox prefHeight="500.0" prefWidth="500.0">
+         <children>
+            <BarChart fx:id="monthGraph" prefHeight="500.0" title="Wykres miesięczny">
+              <xAxis>
+                <CategoryAxis fx:id="osDni" label="Dni" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="osKwota" label="Kwota" side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin>
+      </VBox>
+   </children>
+</StackPane>

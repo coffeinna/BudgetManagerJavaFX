@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane fx:id="borderPane" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BudgetManager.controllers.MainController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="Plik">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#closeApplication" text="Zamknij" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Widok">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#topMenuRevenues" text="Przychody" />
+                  <MenuItem mnemonicParsing="false" onAction="#topMenuExpenses" text="Wydatki" />
+                  <MenuItem mnemonicParsing="false" onAction="#topMenuResults" text="Wyniki" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Wykresy">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#topMenuGraphMonth" text="Miesięczny" />
+                  <MenuItem mnemonicParsing="false" onAction="#topMenuGraphYear" text="Roczny" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <ImageView fitHeight="450.0" fitWidth="450.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../icons/swinka.jpg" />
+         </image>
+      </ImageView>
+   </center>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="1000.0" BorderPane.alignment="CENTER_RIGHT">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin></HBox>
+      <fx:include fx:id="sideMenu" source="SideMenu.fxml" />
+   </bottom>
+</BorderPane>

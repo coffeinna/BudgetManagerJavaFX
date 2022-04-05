@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BudgetManager.controllers.YearGraphPanelController">
+   <children>
+      <VBox prefHeight="500.0" prefWidth="500.0">
+         <children>
+            <LineChart fx:id="yearGraph" prefHeight="500.0" title="Wykres roczny">
+               <xAxis>
+                  <CategoryAxis fx:id="osDni" label="Dni" side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis fx:id="osKwota" label="Kwota" side="LEFT" />
+               </yAxis>
+            </LineChart>
+         </children>
+      </VBox>
+   </children>
+</StackPane>
